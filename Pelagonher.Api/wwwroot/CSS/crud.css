@@ -1,0 +1,166 @@
+﻿/* Frontend/CSS/crud.css */
+
+/* --- Estilos Generales para CRUD (aplicables a cursos y alumnos) --- */
+
+/* Contenedor de la sección CRUD */
+section[id^="crud-"] { /* Selector para cualquier sección con ID que empiece con "crud-" */
+    margin-top: 30px;
+}
+
+/* Estilos para el botón principal de agregar/inscribir */
+button[id^="add-"][id$="-btn"] { /* Selector para botones con ID que empiece con "add-" y termine en "-btn" */
+    background-color: #82b740; /* Verde hoja fresca */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[id^="add-"][id$="-btn"]:hover {
+    background-color: #6a9c33; /* Verde más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Estilos para las tablas (ahora más genérico) */
+table[id$="-table"] { /* Selector para cualquier tabla con ID que termine en "-table" */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table[id$="-table"] th,
+table[id$="-table"] td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table[id$="-table"] th {
+    background-color: #f8f8f8;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table[id$="-table"] tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+table[id$="-table"] tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilos para los botones de acción en la tabla (Editar/Eliminar) */
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 10px; /* Espacio aumentado */
+    transition: background-color 0.3s ease;
+    color: white; /* Color del texto blanco */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra de texto */
+}
+
+.edit-btn {
+    background-color: #e09f3e; /* Ocre / Naranja terroso */
+}
+
+.edit-btn:hover {
+    background-color: #c98e35;
+}
+
+.delete-btn {
+    background-color: #ba4f3e; /* Rojo óxido / Ladrillo */
+}
+
+.delete-btn:hover {
+    background-color: #a04233;
+}
+
+/* Estilos para los contenedores de formulario (ahora más genérico) */
+div[id$="-form-container"] { /* Selector para cualquier div con ID que termine en "-form-container" */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+}
+
+div[id$="-form-container"] h2 {
+    color: #50723c; /* Verde oliva profundo */
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilos para los formularios dentro de los contenedores */
+form[id$="-form"] label { /* Selector para cualquier formulario con ID que termine en "-form" */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+form[id$="-form"] input[type="text"],
+form[id$="-form"] input[type="date"],
+form[id$="-form"] input[type="email"], /* Añadido tipo email */
+form[id$="-form"] textarea,
+form[id$="-form"] select /* Añadido tipo select */ {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form[id$="-form"] textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form[id$="-form"] button[type="submit"],
+form[id$="-form"] button[type="button"] {
+    background-color: #d78521; /* Terracota cálido para guardar */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra para botones principales */
+}
+
+form[id$="-form"] button[type="submit"]:hover {
+    background-color: #b96f1b;
+}
+
+form[id$="-form"] button[type="button"][id$="-cancel-btn"] { /* Selector más específico para el botón de cancelar */
+    background-color: #95a5a6; /* Gris para cancelar */
+}
+
+form[id$="-form"] button[type="button"][id$="-cancel-btn"]:hover {
+    background-color: #7f8c8d;
+}

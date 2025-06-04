@@ -1,0 +1,75 @@
+﻿body {
+}
+/* Frontend/CSS/contenido-teorico.css */
+
+#temas-teoricos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre las tarjetas de temas */
+    padding: 25px 0;
+}
+
+.tema-card {
+    background-color: var(--content-bg-color); /* Fondo del skin actual */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 5px 15px var(--box-shadow-color); /* Sombra para profundidad */
+    padding: 30px; /* Más padding interno */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .tema-card:hover {
+        transform: translateY(-7px); /* Efecto de levantar más la tarjeta en hover */
+        box-shadow: 0 8px 25px var(--box-shadow-color);
+    }
+
+    .tema-card h2 {
+        font-size: 1.8em;
+        color: var(--accent-color-primary); /* Título del tema con color de acento */
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color); /* Línea divisoria */
+        font-weight: 700;
+    }
+
+    .tema-card p {
+        font-size: 1.05em;
+        color: var(--primary-text-color); /* Texto principal */
+        line-height: 1.6;
+        margin-bottom: 25px;
+        flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+    }
+
+.download-btn {
+    display: block; /* Ocupa todo el ancho disponible */
+    background-color: #27ae60; /* Un verde vibrante para descarga */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+}
+
+    .download-btn:hover {
+        background-color: #2ecc71; /* Verde más claro en hover */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/* Adaptación del botón de descarga al skin Ciberpunk */
+body.skin-ciberpunk .download-btn {
+    background-color: #3498db; /* Azul neón para descarga */
+    color: #ecf0f1;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); /* Sombra con resplandor azul */
+}
+
+    body.skin-ciberpunk .download-btn:hover {
+        background-color: #2980b9; /* Azul más oscuro en hover */
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.6);
+    }

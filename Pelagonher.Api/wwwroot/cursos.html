@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos - Pelagonher</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/crud.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div id="main-container">
+        <aside id="sidebar-placeholder"></aside>
+        <main id="main-content">
+            <h1>Gestión de Cursos</h1>
+
+            <section id="crud-cursos-section">
+                <button id="add-curso-btn">Agregar Nuevo Curso</button>
+
+                <h2>Listado de Cursos</h2>
+                <div id="cursos-list-container">
+                    <table id="cursos-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Duración</th>
+                                <th>Fecha Inicio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="curso-form-container" style="display:none;">
+                    <h2>Detalles del Curso</h2>
+                    <form id="curso-form">
+                        <input type="hidden" id="curso-id" name="ID_CURSO">
+
+                        <label for="nombre-curso">Nombre del Curso:</label>
+                        <input type="text" id="nombre-curso" name="NOMBRE_CURSO" required maxlength="100">
+
+                        <label for="descripcion-curso">Descripción:</label>
+                        <textarea id="descripcion-curso" name="DESCRIPCION_CURSO" rows="4"></textarea>
+
+                        <label for="duracion-curso">Duración:</label>
+                        <input type="text" id="duracion-curso" name="DURACION" required maxlength="100">
+
+                        <label for="fecha-inicio-curso">Fecha de Inicio:</label>
+                        <input type="date" id="fecha-inicio-curso" name="FECHA_INICIO">
+
+                        <button type="submit" id="save-curso-btn">Guardar Curso</button>
+                        <button type="button" id="cancel-curso-btn">Cancelar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div> <div id="footer-placeholder"></div>
+    <script src="JS/main.js"></script>
+    <script src="JS/cursos.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿/* Estilos para el contenedor de la lista de cursos */
+#cursos-list-container {
+    display: grid; /* Usamos Grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre las tarjetas */
+    padding: 20px 0;
+}
+
+/* Estilos para cada tarjeta de curso */
+.curso-card {
+    background-color: var(--content-bg-color); /* Color de fondo del skin actual */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px var(--box-shadow-color); /* Sombra para profundidad */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave en hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
+    padding: 20px; /* Padding interno de la tarjeta */
+}
+
+    .curso-card:hover {
+        transform: translateY(-5px); /* Efecto de levantar la tarjeta en hover */
+        box-shadow: 0 6px 20px var(--box-shadow-color); /* Sombra más pronunciada */
+    }
+
+    .curso-card h3 {
+        font-size: 1.6em;
+        color: var(--accent-color-primary); /* Título del curso con color de acento */
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .curso-card p {
+        font-size: 0.95em;
+        color: var(--primary-text-color); /* Texto principal */
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .curso-card .duracion {
+        font-weight: 600;
+        color: var(--secondary-text-color); /* Color secundario para la duración */
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .curso-card .fecha-inicio {
+        font-style: italic;
+        font-size: 0.9em;
+        color: var(--secondary-text-color);
+        margin-bottom: 20px;
+    }
+
+    .curso-card .ver-detalles-btn {
+        display: inline-block;
+        background-color: var(--button-add-bg); /* Un color de botón primario */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none; /* Sin subrayado */
+        font-weight: 600;
+        font-size: 1em;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        margin-top: auto; /* Empuja el botón hacia abajo */
+    }
+
+        .curso-card .ver-detalles-btn:hover {
+            background-color: var(--button-add-bg-hover); /* Un hover ligeramente más oscuro (si lo definimos en style.css) */
+        }

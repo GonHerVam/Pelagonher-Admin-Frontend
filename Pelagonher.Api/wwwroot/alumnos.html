@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de Alumnos - Pelagonher</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/crud.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div id="main-container">
+        <aside id="sidebar-placeholder"></aside>
+        <main id="main-content">
+            <h1>Inscripción de Alumnos</h1> <section id="crud-alumnos-section">
+                <button id="add-alumno-btn">Inscribir Nuevo Alumno</button> <h2>Alumnos Inscritos</h2> <div id="alumnos-list-container">
+                    <table id="alumnos-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>DNI</th>
+                                <th>Email</th>
+                                <th>Curso</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="alumno-form-container" style="display:none;">
+                    <h2>Formulario de Inscripción</h2> <form id="alumno-form">
+                        <input type="hidden" id="alumno-id" name="ID_ALUMNO">
+
+                        <label for="nombre-alumno">Nombre:</label>
+                        <input type="text" id="nombre-alumno" name="NOMBRE" required maxlength="100">
+
+                        <label for="apellido-alumno">Apellido:</label>
+                        <input type="text" id="apellido-alumno" name="APELLIDO" required maxlength="100">
+
+                        <label for="dni-alumno">DNI:</label> <input type="text" id="dni-alumno" name="DNI" required maxlength="20">
+
+                        <label for="correo-alumno">Email:</label> <input type="email" id="correo-alumno" name="CORREO" required maxlength="255">
+
+                        <label for="id-curso-alumno">Curso:</label> <select id="id-curso-alumno" name="ID_CURSO" required>
+                        </select>
+
+                        <button type="submit" id="save-alumno-btn">Guardar Inscripción</button> <button type="button" id="cancel-alumno-btn">Cancelar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="JS/main.js"></script>
+    <script src="JS/alumnos.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+﻿/* Frontend/CSS/style.css */
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); /* Opción alternativa si prefieres Roboto */
+
+/* Reset básico para asegurar consistencia entre navegadores */
+body, h1, h2, h3, p, ul, ol, li, table, form, button, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+body {
+    /* Si elegís Segoe UI */
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    /* Si elegís Open Sans 
+    font-family: 'Open Sans', sans-serif;*/
+    /* Si elegís Roboto */
+    /*font-family: 'Roboto', sans-serif; */
+    line-height: 1.6;
+    background-color: #f8f5ed; /* Fondo suave */
+    color: #4a4a4a;
+    display: flex; /* Para un layout flexible con sidebar */
+    min-height: 100vh; /* Ocupa al menos el alto de la ventana */
+    flex-direction: column; /* Columna principal para header, main, footer */
+}
+
+/* Contenedor principal de la aplicación */
+#main-container {
+    display: flex;
+    flex-grow: 1; /* Permite que main-container ocupe el espacio disponible */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #50723c; /* Azul oscuro para el encabezado */
+    color: #ecf0f1; /* Letra clara */
+    padding: 1rem 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header .logo a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    header ul {
+        list-style: none;
+        display: flex;
+    }
+
+        header ul li {
+            margin-left: 25px;
+        }
+
+            header ul li a {
+                color: #ecf0f1;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+                header ul li a:hover {
+                    color: #a2c18f; /* Azul más vibrante al pasar el mouse */
+                }
+
+/* Estilos para el sidebar */
+aside.sidebar {
+    background-color: #6a8a58; /* Un tono de gris más oscuro que el header */
+    color: #ecf0f1;
+    width: 220px; /* Ancho fijo del sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Evita que el sidebar se achique */
+}
+
+    aside.sidebar h3 {
+        color: #ecf0f1;
+        margin-bottom: 20px;
+        text-align: center;
+        border-bottom: 1px solid #8fad7d;
+        padding-bottom: 10px;
+    }
+
+    aside.sidebar ul {
+        list-style: none;
+    }
+
+        aside.sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+            aside.sidebar ul li a {
+                color: #ecf0f1;
+                text-decoration: none;
+                display: block;
+                padding: 10px 15px;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+                aside.sidebar ul li a:hover {
+                    background-color: #8fad7d; /* Un tono ligeramente más claro al pasar el mouse */
+                }
+
+/* Estilos para el contenido principal */
+main {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    padding: 30px;
+    background-color: #f8f5ed; /* Fondo blanco para el contenido */
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+    main h1 {
+        color: #50723c;
+        margin-bottom: 25px;
+        text-align: center;
+        border-bottom: 2px solid #a2c18f;
+        padding-bottom: 15px;
+    }
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #50723c; /* Verde oliva profundo */
+    color: #ecf0f1; /* Letra clara */
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer al final de la página */
+}
+
+
+/* --- Paleta de Colores "Atardecer Urbano (Ciberpunk)" --- */
+body.skin-ciberpunk {
+    /* Fondos */
+    --main-bg-color: #2c3e50; /* Gris azulado oscuro (noche urbana) */
+    --secondary-bg-color: #34495e; /* Gris azulado ligeramente más claro */
+    --content-bg-color: #1a252f; /* Fondo de contenido muy oscuro */
+
+    /* Textos */
+    --primary-text-color: #ecf0f1; /* Blanco grisáceo claro (neón suave) */
+    --secondary-text-color: #a2c18f; /* Un verde menta suave (de la paleta anterior, pero sigue siendo un acento fresco) */
+    --dark-text-color: #ecf0f1; /* Blanco grisáceo claro para textos oscuros */
+
+    /* Acentos y Botones */
+    --accent-color-primary: #f39c12; /* Naranja quemado / Ámbar (atardecer/neón) */
+    --accent-color-secondary: #e74c3c; /* Rojo vibrante (advertencia/peligro) */
+    --button-add-bg: #27ae60; /* Verde esmeralda (un toque de vida/confirmación) */
+    --button-edit-bg: #f39c12; /* Naranja quemado */
+    --button-delete-bg: #e74c3c; /* Rojo vibrante */
+    --button-neutral-bg: #7f8c8d; /* Gris para cancelar */
+    --border-color: #4a627f; /* Borde sutil gris azulado */
+    --table-header-bg: #3a506b; /* Fondo de encabezado de tabla más oscuro */
+    --table-row-hover-bg: #4a627f; /* Fondo de fila al pasar el mouse */
+
+    /* Sombras (opcional, si quieres más profundidad ciberpunk) */
+    --box-shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Aplicación de las variables para el skin-ciberpunk */
+body.skin-ciberpunk {
+    background-color: var(--main-bg-color);
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk header,
+body.skin-ciberpunk footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk header .logo a,
+body.skin-ciberpunk header ul li a {
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk header ul li a:hover {
+    color: var(--accent-color-primary); /* Un toque naranja neón */
+}
+
+body.skin-ciberpunk aside.sidebar {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk aside.sidebar h3 {
+    color: var(--primary-text-color);
+    border-bottom-color: var(--border-color);
+}
+
+body.skin-ciberpunk aside.sidebar ul li a {
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk aside.sidebar ul li a:hover {
+    background-color: var(--table-row-hover-bg); /* Un tono más oscuro */
+}
+
+body.skin-ciberpunk main h1 {
+    color: var(--accent-color-primary); /* Título principal en naranja */
+    border-bottom-color: var(--border-color);
+}
+
+/* Aplicar a elementos CRUD que usan las variables CSS (crud.css no tiene variables) */
+/* NOTA: Muchas de estas reglas se aplicarán si 'crud.css' no usa variables directamente.
+   Tendremos que sobrescribirlas con selectores más específicos. */
+/* Es mejor hacer que 'crud.css' también use las variables para consistencia total. */
+
+/* Sobrescribir elementos que crud.css ya estiliza, si es necesario */
+body.skin-ciberpunk button[id^="add-"][id$="-btn"] {
+    background-color: var(--button-add-bg);
+}
+body.skin-ciberpunk button[id^="add-"][id$="-btn"]:hover {
+    background-color: #2ecc71; /* Un verde más brillante en hover */
+}
+
+body.skin-ciberpunk table[id$="-table"] {
+    background-color: var(--content-bg-color); /* Fondo oscuro para tablas */
+    color: var(--primary-text-color);
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+body.skin-ciberpunk table[id$="-table"] th {
+    background-color: var(--table-header-bg);
+    color: var(--primary-text-color);
+}
+body.skin-ciberpunk table[id$="-table"] td {
+    border-bottom-color: var(--border-color);
+}
+body.skin-ciberpunk table[id$="-table"] tbody tr:hover {
+    background-color: var(--table-row-hover-bg);
+}
+
+body.skin-ciberpunk .action-btn {
+    color: var(--primary-text-color); /* Texto de botón de acción blanco/neón */
+    text-shadow: none; /* Quitamos la sombra para un look más "plano" ciberpunk */
+}
+
+body.skin-ciberpunk .edit-btn {
+    background-color: var(--button-edit-bg);
+}
+body.skin-ciberpunk .edit-btn:hover {
+    background-color: #e67e22; /* Naranja más fuerte en hover */
+}
+
+body.skin-ciberpunk .delete-btn {
+    background-color: var(--button-delete-bg);
+}
+body.skin-ciberpunk .delete-btn:hover {
+    background-color: #c0392b; /* Rojo más fuerte en hover */
+}
+
+body.skin-ciberpunk div[id$="-form-container"] {
+    background-color: var(--content-bg-color); /* Fondo oscuro para formularios */
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+}
+
+body.skin-ciberpunk div[id$="-form-container"] h2 {
+    color: var(--accent-color-primary); /* Título del formulario en naranja */
+    border-bottom-color: var(--border-color);
+}
+
+body.skin-ciberpunk form[id$="-form"] label {
+    color: var(--primary-text-color);
+}
+
+body.skin-ciberpunk form[id$="-form"] input[type="text"],
+body.skin-ciberpunk form[id$="-form"] input[type="date"],
+body.skin-ciberpunk form[id$="-form"] input[type="email"],
+body.skin-ciberpunk form[id$="-form"] textarea,
+body.skin-ciberpunk form[id$="-form"] select {
+    background-color: #111a21; /* Fondo de inputs muy oscuro */
+    color: var(--primary-text-color);
+    border-color: var(--border-color);
+}
+
+body.skin-ciberpunk form[id$="-form"] button[type="submit"] {
+    background-color: var(--button-edit-bg); /* Mismo naranja que editar, para guardar */
+}
+body.skin-ciberpunk form[id$="-form"] button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+body.skin-ciberpunk form[id$="-form"] button[type="button"][id$="-cancel-btn"] {
+    background-color: var(--button-neutral-bg);
+}
+body.skin-ciberpunk form[id$="-form"] button[type="button"][id$="-cancel-btn"]:hover {
+    background-color: #6c7a7d;
+}
